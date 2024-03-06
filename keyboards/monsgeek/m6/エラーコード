@@ -1,0 +1,69 @@
+[iu@ qmk_firmware]$ make monsgeek/m6:sutamura
+⚠ monsgeek/m6: Feature mousekey is specified in both info.json and rules.mk, the rules.mk value wins.
+⚠ monsgeek/m6: Feature console is specified in both info.json and rules.mk, the rules.mk value wins.
+⚠ monsgeek/m6: Feature rgb_matrix is specified in both info.json and rules.mk, the rules.mk value wins.
+Making monsgeek/m6 with keymap sutamura
+
+⚠ monsgeek/m6: Feature mousekey is specified in both info.json and rules.mk, the rules.mk value wins.
+⚠ monsgeek/m6: Feature console is specified in both info.json and rules.mk, the rules.mk value wins.
+⚠ monsgeek/m6: Feature rgb_matrix is specified in both info.json and rules.mk, the rules.mk value wins.
+Generating: .build/obj_monsgeek_m6_sutamura/src/info_deps.d                                         [OK]
+⚠ monsgeek/m6: Feature mousekey is specified in both info.json and rules.mk, the rules.mk value wins.
+⚠ monsgeek/m6: Feature console is specified in both info.json and rules.mk, the rules.mk value wins.
+⚠ monsgeek/m6: Feature rgb_matrix is specified in both info.json and rules.mk, the rules.mk value wins.
+arm-none-eabi-gcc.exe (GCC) 12.2.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Generating: .build/obj_monsgeek_m6_sutamura/src/info_config.h                                       [WARNINGS]
+ |
+ | ⚠ monsgeek/m6: Feature mousekey is specified in both info.json and rules.mk, the rules.mk value wins.
+ | ⚠ monsgeek/m6: Feature console is specified in both info.json and rules.mk, the rules.mk value wins.
+ | ⚠ monsgeek/m6: Feature rgb_matrix is specified in both info.json and rules.mk, the rules.mk value wins.
+ |
+Generating: .build/obj_monsgeek_m6_sutamura/src/default_keyboard.c                                  [WARNINGS]
+ |
+ | ⚠ monsgeek/m6: Feature mousekey is specified in both info.json and rules.mk, the rules.mk value wins.
+ | ⚠ monsgeek/m6: Feature console is specified in both info.json and rules.mk, the rules.mk value wins.
+ | ⚠ monsgeek/m6: Feature rgb_matrix is specified in both info.json and rules.mk, the rules.mk value wins.
+ |
+Generating: .build/obj_monsgeek_m6_sutamura/src/default_keyboard.h                                  [WARNINGS]
+ |
+ | ⚠ monsgeek/m6: Feature mousekey is specified in both info.json and rules.mk, the rules.mk value wins.
+ | ⚠ monsgeek/m6: Feature console is specified in both info.json and rules.mk, the rules.mk value wins.
+ | ⚠ monsgeek/m6: Feature rgb_matrix is specified in both info.json and rules.mk, the rules.mk value wins.
+ |
+Compiling: keyboards/monsgeek/m6/m6.c                                                              keyboards/monsgeek/m6/m6.c: In function 'process_record_kb':
+keyboards/monsgeek/m6/m6.c:173:21: error: implicit declaration of function 'rgb_matrix_get_flags' [-Werror=implicit-function-declaration]
+  173 |             switch (rgb_matrix_get_flags())
+      |                     ^~~~~~~~~~~~~~~~~~~~
+keyboards/monsgeek/m6/m6.c:175:18: error: 'LED_FLAG_ALL' undeclared (first use in this function)
+  175 |             case LED_FLAG_ALL:
+      |                  ^~~~~~~~~~~~
+keyboards/monsgeek/m6/m6.c:175:18: note: each undeclared identifier is reported only once for each function it appears in
+keyboards/monsgeek/m6/m6.c:177:17: error: implicit declaration of function 'rgb_matrix_set_flags' [-Werror=implicit-function-declaration]
+  177 |                 rgb_matrix_set_flags(LED_FLAG_NONE);
+      |                 ^~~~~~~~~~~~~~~~~~~~
+keyboards/monsgeek/m6/m6.c:177:38: error: 'LED_FLAG_NONE' undeclared (first use in this function)
+  177 |                 rgb_matrix_set_flags(LED_FLAG_NONE);
+      |                                      ^~~~~~~~~~~~~
+keyboards/monsgeek/m6/m6.c:178:17: error: implicit declaration of function 'rgb_matrix_set_color_all' [-Werror=implicit-function-declaration]
+  178 |                 rgb_matrix_set_color_all(0, 0, 0);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~
+keyboards/monsgeek/m6/m6.c:188:14: error: implicit declaration of function 'rgb_matrix_is_enabled'; did you mean 'rgb_matrix_increase'? [-Werror=implicit-function-declaration]
+  188 |         if (!rgb_matrix_is_enabled())
+      |              ^~~~~~~~~~~~~~~~~~~~~
+      |              rgb_matrix_increase
+keyboards/monsgeek/m6/m6.c:191:13: error: implicit declaration of function 'rgb_matrix_enable'; did you mean 'rgb_matrix_decrease'? [-Werror=implicit-function-declaration]
+  191 |             rgb_matrix_enable();
+      |             ^~~~~~~~~~~~~~~~~
+      |             rgb_matrix_decrease
+cc1.exe: all warnings being treated as errors
+ [ERRORS]
+ |
+ |
+ |
+make[1]: *** [builddefs/common_rules.mk:373: .build/obj_monsgeek_m6_sutamura/keyboards/monsgeek/m6/m6.o] エラー 1
+Make finished with errors
+make: *** [Makefile:415: monsgeek/m6:sutamura] エラー 1
